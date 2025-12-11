@@ -294,6 +294,41 @@ $('.openbtn').on('click', function(){
 
 ---
 
+## Git運用
+
+### リポジトリ情報
+
+- **リポジトリ**: https://github.com/h-nada/dms
+- **SSHホスト**: `github.com-nada`（`~/.ssh/config` で設定済み）
+- **SSHキー**: `~/.ssh/id_ed25519_nada`
+
+### 基本操作
+
+```bash
+# 変更状況の確認
+git status
+
+# 変更をステージング
+git add -A
+
+# コミット
+git commit -m "変更内容の説明"
+
+# プッシュ
+git push origin main
+
+# リモートの変更を取得
+git pull origin main
+```
+
+### 注意事項
+
+- このリポジトリは `h-nada` アカウント専用のSSH設定を使用しています
+- リモートURLは `git@github.com-nada:h-nada/dms.git` 形式です
+- `.gitignore` により `.DS_Store` 等は自動的に除外されます
+
+---
+
 ## ライセンス
 
 このテンプレートは社内利用を目的としています。
