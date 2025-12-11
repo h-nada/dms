@@ -1860,12 +1860,11 @@ footer {
 }
 @media all and (max-width: 750px) {
   .hero__catchcopy {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     display: block;
     text-align: center;
     margin: 0 auto;
-    padding: 1rem 1rem;
-    white-space: nowrap;
+    padding: 1rem 1.5rem;
   }
 }
 .hero__logo {

@@ -136,12 +136,11 @@
     }
 
     @include sp {
-      font-size: $font-size-sm;
+      font-size: $font-size-md;
       display: block;
       text-align: center;
       margin: 0 auto;
-      padding: 1rem 1rem;
-      white-space: nowrap;
+      padding: 1rem 1.5rem;
     }
   }
 
