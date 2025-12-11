@@ -2298,7 +2298,8 @@ footer {
 }
 .voice-item__q-title .q-mark {
   color: #4AADD3;
-  font-size: 120%;
+  font-size: 180%;
+  font-weight: 900;
 }
 .voice-item__answer {
   display: flex;
@@ -2314,10 +2315,16 @@ footer {
 }
 .voice-item__a-content {
   flex: 1;
+  max-width: calc(100% - 160px);
   background: #f5f5f5;
   padding: 2rem;
   border-radius: 10px;
   position: relative;
+}
+@media all and (max-width: 750px) {
+  .voice-item__a-content {
+    max-width: 100%;
+  }
 }
 .voice-item__a-content::after {
   content: "";
@@ -2343,15 +2350,25 @@ footer {
 }
 .voice-item__person-right {
   flex-shrink: 0;
-}
-.voice-item__person-right img {
-  width: 100px;
-  height: auto;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #4AADD3;
+  background: #ffffff;
 }
 @media all and (max-width: 750px) {
-  .voice-item__person-right img {
-    width: 80px;
+  .voice-item__person-right {
+    width: 100px;
+    height: 100px;
   }
+}
+.voice-item__person-right img {
+  width: 100%;
+  height: calc(100% - 10px);
+  object-fit: contain;
+  display: block;
+  margin-top: 10px;
 }
 
 .contact-section {
@@ -2837,6 +2854,83 @@ footer {
   background: #ffffff;
 }
 
+.fixed-persons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+@media all and (max-width: 750px) {
+  .fixed-persons {
+    display: none;
+  }
+}
+.fixed-persons__left {
+  position: absolute;
+  left: 2%;
+  bottom: 5%;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.fixed-persons__left img {
+  height: 450px;
+  width: auto;
+  object-fit: contain;
+}
+.fixed-persons__right {
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+.fixed-persons__right img {
+  height: 450px;
+  width: auto;
+  object-fit: contain;
+}
+.fixed-persons.is-visible .fixed-persons__left {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fixed-persons.is-visible .fixed-persons__right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (min-width: 1400px) {
+  .fixed-persons__left {
+    left: 3%;
+  }
+  .fixed-persons__left img {
+    height: 500px;
+  }
+  .fixed-persons__right {
+    right: 3%;
+  }
+  .fixed-persons__right img {
+    height: 500px;
+  }
+}
+@media (max-width: 1100px) and (min-width: 750px) {
+  .fixed-persons__left {
+    left: 1%;
+  }
+  .fixed-persons__left img {
+    height: 350px;
+  }
+  .fixed-persons__right {
+    right: 1%;
+  }
+  .fixed-persons__right img {
+    height: 350px;
+  }
+}
 @keyframes fadeUpAnime {
   from {
     opacity: 0;

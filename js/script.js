@@ -88,4 +88,43 @@ $(function() {
 		delayScrollAnime();
 	});
 
+
+	// ============================================
+	// 固定人物画像のスクロール連動表示
+	// ============================================
+	function fixedPersonsAnime() {
+		var $fixedPersons = $('.fixed-persons');
+		var $trigger = $('#activities'); // 活動内容セクションをトリガーに
+
+		// トリガー要素が存在しない場合は何もしない
+		if ($trigger.length === 0 || $fixedPersons.length === 0) {
+			return;
+		}
+
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		var triggerPos = $trigger.offset().top;
+
+		// トリガー位置（セクションが画面に入ってきたら）
+		var showPoint = triggerPos - windowHeight * 0.7;
+
+		if (scroll >= showPoint) {
+			// 表示
+			$fixedPersons.addClass('is-visible');
+		} else {
+			// 非表示（上にスクロールしてトリガー位置より上に戻った場合）
+			$fixedPersons.removeClass('is-visible');
+		}
+	}
+
+	// スクロール時に実行
+	$(window).on('scroll', function() {
+		fixedPersonsAnime();
+	});
+
+	// ページ読み込み時にも実行
+	$(window).on('load', function() {
+		fixedPersonsAnime();
+	});
+
 });

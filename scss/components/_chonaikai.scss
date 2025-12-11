@@ -627,7 +627,8 @@
 
     .q-mark {
       color: $color-primary;
-      font-size: 120%;
+      font-size: 180%;
+      font-weight: $font-weight-black;
     }
   }
 
@@ -645,10 +646,15 @@
 
   &__a-content {
     flex: 1;
+    max-width: calc(100% - 160px); // 回答者画像のスペースを確保
     background: $color-bg-gray;
     padding: 2rem;
     border-radius: $border-radius-lg;
     position: relative;
+
+    @include sp {
+      max-width: 100%;
+    }
 
     &::after {
       content: '';
@@ -677,14 +683,24 @@
 
   &__person-right {
     flex-shrink: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid $color-primary;
+    background: $color-bg-white;
+
+    @include sp {
+      width: 100px;
+      height: 100px;
+    }
 
     img {
-      width: 100px;
-      height: auto;
-
-      @include sp {
-        width: 80px;
-      }
+      width: 100%;
+      height: calc(100% - 10px);
+      object-fit: contain; // 画像全体を表示
+      display: block;
+      margin-top: 10px;
     }
   }
 }

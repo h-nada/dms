@@ -1,0 +1,119 @@
+// ============================================
+// 固定人物画像 - _fixed-persons.scss
+// スクロールに連動してフェードイン/アウトする固定画像
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// --------------------------------------------
+// 固定人物画像コンテナ
+// --------------------------------------------
+
+.fixed-persons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; // クリックを透過
+  z-index: 50; // コンテンツより上、ヘッダーより下
+
+  // モバイルでは非表示
+  @include sp {
+    display: none;
+  }
+
+  // 左側の人物
+  &__left {
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s $easing-smooth, transform 0.6s $easing-smooth;
+
+    img {
+      height: 450px;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  // 右側の人物
+  &__right {
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s $easing-smooth, transform 0.6s $easing-smooth;
+
+    img {
+      height: 450px;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  // 表示状態
+  &.is-visible {
+    .fixed-persons__left {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fixed-persons__right {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+// --------------------------------------------
+// 大画面での調整
+// --------------------------------------------
+
+@media (min-width: 1400px) {
+  .fixed-persons {
+    &__left {
+      left: 3%;
+
+      img {
+        height: 500px;
+      }
+    }
+
+    &__right {
+      right: 3%;
+
+      img {
+        height: 500px;
+      }
+    }
+  }
+}
+
+// --------------------------------------------
+// 小さめのPCでの調整
+// --------------------------------------------
+
+@media (max-width: 1100px) and (min-width: $breakpoint-sm) {
+  .fixed-persons {
+    &__left {
+      left: 1%;
+
+      img {
+        height: 350px;
+      }
+    }
+
+    &__right {
+      right: 1%;
+
+      img {
+        height: 350px;
+      }
+    }
+  }
+}
