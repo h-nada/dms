@@ -69,21 +69,22 @@
 
   &__badge {
     display: inline-block;
-    background: #2E7D32;
+    background: #00367f;
     color: $color-text-white;
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 2.5rem;
     border-radius: $border-radius-round;
-    font-size: $font-size-sm;
+    font-size: $font-size-lg;
     font-weight: $font-weight-bold;
     margin-bottom: 2rem;
 
     @include sp {
-      font-size: $font-size-xs;
-      padding: 0.4rem 1.5rem;
+      font-size: $font-size-md;
+      padding: 0.6rem 2rem;
     }
   }
 
   &__title {
+    color: #00367f;
     margin-bottom: 2rem;
     // 背景色と同じフチ（テキストシャドウ）- 4px幅
     text-shadow:
@@ -115,12 +116,9 @@
       text-align: center;
     }
 
-    .highlight {
-      color: $color-primary;
-    }
-
+    .highlight,
     .highlight-orange {
-      color: $color-accent;
+      color: #00367f;
     }
   }
 
