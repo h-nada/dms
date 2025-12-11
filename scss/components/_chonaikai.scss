@@ -797,6 +797,10 @@
   &__qr {
     margin-bottom: 0.6rem;
 
+    .qr-link {
+      display: block;
+    }
+
     img {
       width: 80px;
       height: 80px;
@@ -903,6 +907,10 @@
 
   &__qr {
     flex-shrink: 0;
+
+    .qr-link {
+      display: block;
+    }
 
     img {
       width: 80px;
