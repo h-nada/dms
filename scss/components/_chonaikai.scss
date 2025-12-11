@@ -236,7 +236,8 @@
   @include sp {
     margin: 0 1.5rem;
     padding: 20px;
-    min-height: 300px;
+    min-height: auto;
+    background: none; // モバイルでは背景画像を非表示
   }
 
   // 白い半透明の内部コンテンツエリア
@@ -487,6 +488,7 @@
   &__text {
     font-size: $font-size-sm;
     line-height: 1.7;
+    text-align: justify;
   }
 
   // 補足テキスト内のスタイル
@@ -671,6 +673,7 @@
   &__a-text {
     line-height: 1.8;
     margin-bottom: 1rem;
+    text-align: justify;
   }
 
   &__a-name {
@@ -944,6 +947,7 @@
     font-size: $font-size-xs;
     color: $color-text-light;
     line-height: 1.6;
+    text-align: justify;
   }
 }
 
@@ -984,8 +988,9 @@
     font-size: $font-size-lg;
 
     @include sp {
-      font-size: $font-size-md;
+      font-size: $font-size-lg;
       text-align: center;
+      white-space: nowrap;
     }
   }
 
