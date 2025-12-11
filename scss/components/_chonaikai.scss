@@ -136,11 +136,12 @@
     }
 
     @include sp {
-      font-size: $font-size-md;
+      font-size: $font-size-sm;
       display: block;
       text-align: center;
       margin: 0 auto;
-      max-width: 90%;
+      padding: 1rem 1rem;
+      white-space: nowrap;
     }
   }
 
@@ -841,6 +842,7 @@
     padding: 2rem 2.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     @include pc {
       flex: 0 0 auto;
@@ -988,9 +990,8 @@
     font-size: $font-size-lg;
 
     @include sp {
-      font-size: $font-size-lg;
+      font-size: $font-size-md;
       text-align: center;
-      white-space: nowrap;
     }
   }
 

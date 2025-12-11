@@ -1860,11 +1860,12 @@ footer {
 }
 @media all and (max-width: 750px) {
   .hero__catchcopy {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     display: block;
     text-align: center;
     margin: 0 auto;
-    max-width: 90%;
+    padding: 1rem 1rem;
+    white-space: nowrap;
   }
 }
 .hero__logo {
@@ -2500,6 +2501,7 @@ footer {
   padding: 2rem 2.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 @media all and (min-width: 751px) {
   .contact-main__left {
@@ -2642,9 +2644,8 @@ footer {
 }
 @media all and (max-width: 750px) {
   .cta-message__text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
-    white-space: nowrap;
   }
 }
 .cta-message__badge {
