@@ -665,14 +665,13 @@
       border-left-color: $color-bg-gray;
 
       @include sp {
-        // モバイルでは上向きの吹き出しに変更
+        // モバイルでは吹き出し上部に三角形（上の人物画像を指す）
         right: auto;
-        top: auto;
-        bottom: -15px;
+        top: -15px;
         left: 50%;
         transform: translateX(-50%);
         border-left-color: transparent;
-        border-top-color: $color-bg-gray;
+        border-bottom-color: $color-bg-gray;
       }
     }
   }

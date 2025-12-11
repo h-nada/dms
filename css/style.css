@@ -2339,12 +2339,11 @@ footer {
 @media all and (max-width: 750px) {
   .voice-item__a-content::after {
     right: auto;
-    top: auto;
-    bottom: -15px;
+    top: -15px;
     left: 50%;
     transform: translateX(-50%);
     border-left-color: transparent;
-    border-top-color: #f5f5f5;
+    border-bottom-color: #f5f5f5;
   }
 }
 .voice-item__a-text {
