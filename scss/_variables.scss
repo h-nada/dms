@@ -7,18 +7,18 @@
 // カラー設定
 // --------------------------------------------
 
-// メインカラー（町内会・自治会テーマ：水色系）
-$color-primary: #4AADD3;          // プライマリカラー（水色・メイン）
-$color-primary-dark: #2E8DB3;     // プライマリカラー（暗め）
-$color-primary-light: #7CC5E3;    // プライマリカラー（明るめ）
+// メインカラー（町内会・自治会テーマ：紺色系）
+$color-primary: #00367f;          // プライマリカラー（紺色・メイン）
+$color-primary-dark: #002655;     // プライマリカラー（暗め）
+$color-primary-light: #3366a3;    // プライマリカラー（明るめ）
 
 // アクセントカラー（黄色・オレンジ系）
 $color-accent: #F5A623;           // アクセントカラー（黄色・CTA）
 $color-accent-light: #FFD54F;     // アクセントカラー（明るめ）
 
 // セカンダリカラー
-$color-secondary: #4AADD3;        // セカンダリカラー（水色）
-$color-secondary-light: #B8E0EF;  // セカンダリカラー（明るめ）
+$color-secondary: #00367f;        // セカンダリカラー（紺色）
+$color-secondary-light: #B8E0EF;  // セカンダリカラー（明るめ・水色背景用）
 
 // 背景色
 $color-bg-main: #FDF8E8;          // メイン背景色（クリーム系）
@@ -32,7 +32,7 @@ $color-text-main: #333333;        // メインテキスト
 $color-text-dark: #000000;        // 強調テキスト
 $color-text-light: #666666;       // 薄めテキスト
 $color-text-white: #ffffff;       // 白テキスト
-$color-text-link: #4AADD3;        // リンクテキスト
+$color-text-link: #00367f;        // リンクテキスト
 
 // 装飾カラー
 $color-marker-blue: rgba(0, 160, 233, 0.5);   // 青マーカー

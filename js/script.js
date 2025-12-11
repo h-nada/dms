@@ -90,14 +90,15 @@ $(function() {
 
 
 	// ============================================
-	// 固定人物画像のスクロール連動表示
+	// 固定人物画像・ページトップボタンのスクロール連動表示
 	// ============================================
 	function fixedPersonsAnime() {
 		var $fixedPersons = $('.fixed-persons');
+		var $pagetopBtn = $('.btn_pagetop');
 		var $trigger = $('#activities'); // 活動内容セクションをトリガーに
 
 		// トリガー要素が存在しない場合は何もしない
-		if ($trigger.length === 0 || $fixedPersons.length === 0) {
+		if ($trigger.length === 0) {
 			return;
 		}
 
@@ -111,9 +112,11 @@ $(function() {
 		if (scroll >= showPoint) {
 			// 表示
 			$fixedPersons.addClass('is-visible');
+			$pagetopBtn.addClass('is-visible');
 		} else {
 			// 非表示（上にスクロールしてトリガー位置より上に戻った場合）
 			$fixedPersons.removeClass('is-visible');
+			$pagetopBtn.removeClass('is-visible');
 		}
 	}
 

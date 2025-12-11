@@ -18,10 +18,7 @@ footer {
     font-size: $font-size-xs;
     text-align: center;
     color: $color-text-white;
-
-    @include pc {
-      padding: 0 0 50px 0;
-    }
+    padding: 0 0 30px 0;
 
     @include sp {
       padding: 0 0 2vw 0;
@@ -103,24 +100,23 @@ footer {
 .footer_logo {
   margin: 0 auto;
   text-align: center;
-
-  @include pc {
-    width: 280px;
-    padding: 80px 0 70px;
-  }
+  padding: 70px 0 60px;
 
   @include sp {
-    width: 100%;
     padding: 10vw 0 5vw;
   }
 
   img {
+    background: $color-bg-white;
+    padding: 1rem 2rem;
+    border-radius: $border-radius-md;
+
     @include pc {
-      width: 100%;
+      width: 168px; // 280px * 60%
     }
 
     @include sp {
-      width: 60%;
+      width: 36%; // 60% * 60%
     }
   }
 }
@@ -134,6 +130,14 @@ footer {
   position: fixed;
   bottom: 1rem;
   z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-base $easing-default, visibility $transition-base $easing-default;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
 
   @include pc {
     right: 20px;
@@ -142,20 +146,19 @@ footer {
   @include sp {
     right: 1rem;
     z-index: 3;
-    opacity: 0.9;
   }
 
   a {
     display: block;
     opacity: 0.9;
-    transition: all $transition-fast $easing-default;
+    transition: opacity $transition-fast $easing-default;
 
     @include pc {
-      width: 100px;
+      width: 50px;
     }
 
     @include sp {
-      width: 12vw;
+      width: 6vw;
     }
 
     &:hover {
