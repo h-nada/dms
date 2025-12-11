@@ -665,7 +665,14 @@
       border-left-color: $color-bg-gray;
 
       @include sp {
-        display: none;
+        // モバイルでは上向きの吹き出しに変更
+        right: auto;
+        top: auto;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left-color: transparent;
+        border-top-color: $color-bg-gray;
       }
     }
   }
