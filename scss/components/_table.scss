@@ -1,0 +1,168 @@
+// ============================================
+// テーブルスタイル - _table.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// レスポンシブテーブルラッパー
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+// ============================================
+// 連携テーブル
+// ============================================
+
+.renkei-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  @include pc {
+    font-size: $font-size-sm;
+    min-width: 800px;
+  }
+
+  @include sp {
+    font-size: $font-size-xs;
+    min-width: 700px;
+  }
+
+  thead {
+    background: #f0f8ff;
+  }
+
+  th,
+  td {
+    border: 1px solid $color-border-dark;
+    text-align: left;
+    vertical-align: middle;
+
+    @include pc {
+      padding: 12px 10px;
+    }
+
+    @include sp {
+      padding: 8px 6px;
+    }
+  }
+
+  th {
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+    color: $color-text-main;
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background: $color-bg-white;
+    }
+
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    tr:hover {
+      background: #f5f5dc;
+    }
+  }
+
+  // カラム幅
+  .col-no {
+    text-align: center;
+
+    @include pc {
+      width: 50px;
+    }
+
+    @include sp {
+      width: 40px;
+    }
+  }
+
+  .col-company {
+    @include pc {
+      width: 200px;
+    }
+
+    @include sp {
+      width: 150px;
+    }
+  }
+
+  .col-title {
+    width: auto;
+  }
+
+  .col-partner {
+    @include pc {
+      width: 180px;
+    }
+
+    @include sp {
+      width: 140px;
+    }
+  }
+
+  .col-other {
+    @include pc {
+      width: 180px;
+    }
+
+    @include sp {
+      width: 140px;
+    }
+  }
+}
+
+
+// ============================================
+// 基本テーブル（about9）
+// ============================================
+
+.about9 {
+  width: 100%;
+  margin-top: 5rem;
+
+  table {
+    margin: 0 auto;
+    border: 1px solid $color-border;
+
+    @include pc {
+      width: 740px;
+    }
+
+    @include sp {
+      width: 90%;
+    }
+
+    th {
+      border: 1px solid $color-border;
+      padding: 2rem;
+      text-align: center;
+      background: #f0f0f0;
+      vertical-align: middle;
+
+      @include pc {
+        width: 12rem;
+      }
+
+      @include sp {
+        width: 10rem;
+        padding: 2rem 1rem;
+      }
+    }
+
+    td {
+      border: 1px solid $color-border;
+      padding: 2rem;
+      background: $color-bg-white;
+
+      a {
+        @include link-underline($color-accent);
+      }
+    }
+  }
+}

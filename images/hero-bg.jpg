@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="800" viewBox="0 0 1920 800">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="100%" style="stop-color:#E0F4FF"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#sky)" width="1920" height="800"/>
+  <text x="960" y="400" font-family="sans-serif" font-size="40" fill="#666" text-anchor="middle">メインビジュアル背景（差し替え用）</text>
+</svg>

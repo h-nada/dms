@@ -1,0 +1,171 @@
+// ============================================
+// フッター - _footer.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+footer {
+  width: 100%;
+}
+
+.footer__w {
+  width: 100%;
+  background: $color-bg-dark;
+  position: relative;
+
+  p {
+    font-size: $font-size-xs;
+    text-align: center;
+    color: $color-text-white;
+
+    @include pc {
+      padding: 0 0 50px 0;
+    }
+
+    @include sp {
+      padding: 0 0 2vw 0;
+    }
+  }
+}
+
+.footer1 {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include pc {
+    width: $content-width-lg;
+  }
+
+  @include sp {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.footer2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: $color-text-white;
+  text-align: center;
+}
+
+.footer3 {
+  width: 100%;
+  margin-bottom: 2rem;
+  font-weight: $font-weight-normal;
+
+  @include pc {
+    font-size: $font-size-lg;
+  }
+
+  @include sp {
+    font-size: $font-size-sm;
+  }
+}
+
+.footer4 {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @include pc {
+    letter-spacing: 0.2rem;
+  }
+
+  @include sp {
+    letter-spacing: 0.05rem;
+  }
+}
+
+.footer5 {
+  a {
+    color: $color-text-white;
+    font-weight: $font-weight-medium;
+    font-family: $font-family-yakuhan;
+
+    @include pc {
+      font-size: $font-size-3xl;
+    }
+
+    @include sp {
+      font-size: $font-size-xl;
+    }
+  }
+}
+
+.footer_logo {
+  margin: 0 auto;
+  text-align: center;
+
+  @include pc {
+    width: 280px;
+    padding: 80px 0 70px;
+  }
+
+  @include sp {
+    width: 100%;
+    padding: 10vw 0 5vw;
+  }
+
+  img {
+    @include pc {
+      width: 100%;
+    }
+
+    @include sp {
+      width: 60%;
+    }
+  }
+}
+
+
+// ============================================
+// ページトップボタン
+// ============================================
+
+.btn_pagetop {
+  position: fixed;
+  bottom: 1rem;
+  z-index: 99;
+
+  @include pc {
+    right: 20px;
+  }
+
+  @include sp {
+    right: 1rem;
+    z-index: 3;
+    opacity: 0.9;
+  }
+
+  a {
+    display: block;
+    opacity: 0.9;
+    transition: all $transition-fast $easing-default;
+
+    @include pc {
+      width: 100px;
+    }
+
+    @include sp {
+      width: 12vw;
+    }
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.5;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}

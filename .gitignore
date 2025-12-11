@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+.vscode/
+
+# Sass cache
+.sass-cache/

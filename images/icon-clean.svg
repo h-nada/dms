@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <circle cx="40" cy="40" r="38" fill="#E8F4FC" stroke="#4AADD3" stroke-width="2"/>
+  <path d="M25 55 L35 25 L45 25 L55 55 L45 55 L43 48 L37 48 L35 55 Z" fill="#4AADD3"/>
+  <circle cx="40" cy="20" r="5" fill="#4AADD3"/>
+  <text x="40" y="75" font-family="sans-serif" font-size="8" fill="#333" text-anchor="middle">美化</text>
+</svg>

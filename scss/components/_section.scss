@@ -1,0 +1,245 @@
+// ============================================
+// セクション共通スタイル - _section.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// アンカーリンク用スペーサー
+.alink {
+  @include pc {
+    margin-top: -$header-height-pc;
+    padding-top: $header-height-pc;
+  }
+
+  @include sp {
+    margin-top: -$header-height-sp;
+    padding-top: $header-height-sp;
+  }
+}
+
+// セクションラッパー
+.about__w {
+  width: 100%;
+}
+
+// セクション内コンテナ
+.about1 {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include pc {
+    width: $content-width-md;
+    padding: $section-padding-pc;
+  }
+
+  @include sp {
+    width: 100%;
+    padding: $section-padding-sp;
+  }
+}
+
+// セクションタイトル
+.about2 {
+  width: 100%;
+  text-align: center;
+  background: url(../images/line4.png) center bottom no-repeat;
+
+  @include pc {
+    margin-bottom: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  @include sp {
+    margin-bottom: 3rem;
+    background-size: 90%;
+    padding: 0 2rem 2.5rem;
+  }
+
+  h2 {
+    font-weight: $font-weight-black;
+    color: $color-text-dark;
+
+    @include pc {
+      font-size: $font-size-4xl;
+      letter-spacing: 0.3rem;
+    }
+
+    @include sp {
+      font-size: $font-size-xl;
+      letter-spacing: 0.15rem;
+    }
+  }
+}
+
+// セクション本文
+.about3 {
+  width: 100%;
+}
+
+.about4, .about4-2 {
+  border-radius: $border-radius-lg;
+  margin: 0 auto 5rem;
+  line-height: $line-height-loose;
+
+  @include pc {
+    width: $content-width-sm;
+    font-size: $font-size-lg;
+    padding: 0 3rem;
+  }
+
+  @include sp {
+    width: 100%;
+    padding: 0 3rem;
+    margin: 0 auto 3rem;
+  }
+
+  a {
+    @include link-underline($color-accent);
+  }
+}
+
+
+// ============================================
+// リンクボタンエリア
+// ============================================
+
+.about6 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include pc {
+    width: $content-width-sm;
+    margin: 0 auto 5rem;
+    gap: 20px;
+  }
+
+  @include sp {
+    width: 95%;
+    margin: 0 auto 5rem;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.about5 {
+  text-align: center;
+
+  @include pc {
+    width: calc(50% - 10px);
+    margin: 0;
+  }
+
+  @include sp {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  a {
+    @include button-primary;
+    display: inline-block;
+    width: 100%;
+
+    @include pc {
+      width: 380px;
+    }
+
+    span {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      padding: 3rem 2rem;
+    }
+  }
+}
+
+.about5-1 a span {
+  padding: 1.55rem 0 !important;
+
+  @include sp {
+    padding: 1.8rem 0 !important;
+  }
+}
+
+// アウトラインボタン
+.about7 {
+  @include pc {
+    width: 48%;
+  }
+
+  @include sp {
+    width: 100%;
+  }
+
+  a {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    border-radius: $border-radius-lg;
+    color: $color-primary;
+    background: #fff9b5;
+    border: 2px solid $color-primary;
+    letter-spacing: 0;
+
+    @include pc {
+      padding: 3rem 0;
+      font-size: $font-size-md;
+      margin-right: 2.5%;
+      margin-bottom: 2rem;
+    }
+
+    @include sp {
+      padding: 2rem;
+      font-size: $font-size-sm;
+      margin-bottom: 2rem;
+    }
+
+    span::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 13px;
+      width: 8px;
+      height: 8px;
+      margin-top: -4px;
+      transform: rotate(45deg);
+      border-top: 2px solid $color-primary;
+      border-right: 2px solid $color-primary;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+
+// ============================================
+// 補足リンクエリア
+// ============================================
+
+.about8 {
+  width: 100%;
+  text-align: center;
+
+  @include pc {
+    margin-top: 2rem;
+  }
+
+  @include sp {
+    margin-top: 1rem;
+    padding: 0 2rem;
+    font-size: $font-size-xs;
+  }
+
+  a {
+    @include link-underline($color-accent);
+  }
+}

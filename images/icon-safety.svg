@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <circle cx="40" cy="40" r="38" fill="#E8F4FC" stroke="#4AADD3" stroke-width="2"/>
+  <path d="M40 15 L55 25 L55 45 C55 55 40 65 40 65 C40 65 25 55 25 45 L25 25 Z" fill="#4AADD3"/>
+  <text x="40" y="75" font-family="sans-serif" font-size="8" fill="#333" text-anchor="middle">安全</text>
+</svg>

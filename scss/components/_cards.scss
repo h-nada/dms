@@ -1,0 +1,446 @@
+// ============================================
+// カードスタイル - _cards.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ============================================
+// ボーダーカード（about11）
+// ============================================
+
+.about11 {
+  @include card-border($color-secondary);
+  margin: 0 auto 7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include pc {
+    width: $content-width-md;
+    padding: 6rem 0;
+  }
+
+  @include sp {
+    width: 95%;
+    padding: 3rem 0;
+  }
+
+  &:last-child {
+    @include sp {
+      margin: 0 auto 0;
+    }
+  }
+}
+
+// カードタイトル
+.about12 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+  background: url(../images/line2.png) center bottom no-repeat;
+  font-weight: $font-weight-bold;
+
+  @include pc {
+    padding-bottom: 5rem;
+    font-size: $font-size-3xl;
+  }
+
+  @include sp {
+    padding: 2rem 2rem 7rem;
+    font-size: $font-size-xl;
+  }
+
+  a {
+    text-decoration: underline !important;
+
+    &:hover {
+      color: #09c !important;
+    }
+  }
+}
+
+// カードコンテンツ
+.about13 {
+  width: 100%;
+  margin: 0 auto 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include pc {
+    padding: 0 50px;
+  }
+
+  @include sp {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+}
+
+.about14 {
+  @include pc {
+    a {
+      width: 760px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-size-2xl;
+      border: 1px solid $color-border;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-inset;
+      font-weight: $font-weight-bold;
+      padding: 4rem 0;
+      margin: 0 auto 3rem;
+
+      &:hover {
+        box-shadow: inset 0 0 20px #09c;
+      }
+    }
+  }
+
+  @include sp {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-md;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-inset;
+    font-weight: $font-weight-bold;
+    padding: 4rem 1rem;
+    margin: 0 auto 3rem;
+  }
+}
+
+.about15 {
+  width: 100%;
+  text-align: center;
+
+  img {
+    text-align: center;
+
+    @include pc {
+      width: 500px;
+    }
+
+    @include sp {
+      width: 100%;
+    }
+  }
+}
+
+
+// ============================================
+// コンテンツセクション
+// ============================================
+
+.about16 {
+  width: 100%;
+  margin: 0 auto 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include pc {
+    padding: 0 50px;
+  }
+
+  @include sp {
+    padding: 0 2rem;
+  }
+}
+
+// グラデーション見出し
+.about17 {
+  position: relative;
+  width: 100%;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to right, #00a0e9, $color-bg-white);
+    border-left: 5px solid $color-text-dark;
+    z-index: -1;
+  }
+}
+
+.about18 {
+  width: 100%;
+  line-height: $line-height-base;
+  text-align: justify;
+
+  @include pc {
+    padding: 0 2rem;
+  }
+
+  @include sp {
+    padding: 0 2rem;
+  }
+}
+
+.about18-2 {
+  width: 100%;
+  font-size: 110%;
+  line-height: $line-height-base;
+  text-align: justify;
+
+  @include pc {
+    padding: 0 7rem;
+  }
+}
+
+
+// ============================================
+// 画像カード
+// ============================================
+
+.about19 {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 50px;
+
+  @include pc {
+    margin-bottom: 5.5rem;
+  }
+
+  @include sp {
+    margin-bottom: 7rem;
+  }
+}
+
+.about20 {
+  @include pc {
+    width: 400px;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include sp {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  figcaption {
+    padding-top: 0.5rem;
+    font-size: 90%;
+  }
+
+  p {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+
+    @include pc {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+
+// ============================================
+// ボーダー見出しセクション
+// ============================================
+
+.about21 {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.about22 {
+  width: 100%;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  padding-left: 1.5rem;
+  border-left: 5px solid $color-text-dark;
+  margin-bottom: 2rem;
+}
+
+.about23 {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.about24 {
+  @include pc {
+    width: 180px;
+    margin-right: 2rem;
+  }
+
+  @include sp {
+    width: 30%;
+    margin-right: 5%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// ============================================
+// 白背景カード
+// ============================================
+
+.about25 {
+  display: inline-block;
+  border-radius: $border-radius-lg;
+  background: $color-bg-white;
+  margin-bottom: 2rem;
+  letter-spacing: 0;
+
+  @include pc {
+    width: 48%;
+    padding: 1rem 0 1rem 3rem;
+    font-size: $font-size-md;
+    margin-right: 2.5%;
+  }
+
+  @include sp {
+    width: 100%;
+    padding: 1rem;
+    font-size: $font-size-sm;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+.about26 {
+  width: 100%;
+
+  span {
+    display: inline-block;
+    text-align: center;
+    background: $color-text-dark;
+    color: $color-text-white;
+    padding: 0.1rem 2rem;
+    border-radius: $border-radius-round;
+
+    @include pc {
+      margin-top: 1rem;
+      font-size: $font-size-xs;
+    }
+
+    @include sp {
+      margin-top: 0.5rem;
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+
+// ============================================
+// 表彰カード（hyosho）
+// ============================================
+
+.hyosho-container {
+  display: flex;
+
+  @include pc {
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-bottom: 20px;
+  }
+
+  @include sp {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 45px;
+  }
+}
+
+.hyosho-box {
+  position: relative;
+  margin: 0 auto;
+  background-color: $color-bg-main;
+  border: 1px solid $color-text-dark;
+  box-shadow: $shadow-sm;
+
+  @include pc {
+    width: 48%;
+  }
+
+  @include sp {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:first-of-type {
+      margin-bottom: 50px;
+    }
+  }
+
+  ol {
+    list-style: none;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin: 40px 20px 10px;
+  }
+}
+
+.hyosho-header {
+  position: absolute;
+  top: -30px;
+  background-color: $color-bg-main;
+  border: 1px solid $color-text-dark;
+  color: $color-text-dark;
+  text-align: center;
+  display: inline-block;
+  border-radius: 30px;
+  line-height: 1.2em;
+  height: 60px;
+
+  @include pc {
+    left: 14px;
+    padding: 18px 20px;
+    width: 92%;
+  }
+
+  @include sp {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 95%;
+    padding: 10px 20px;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+}

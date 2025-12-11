@@ -1,0 +1,31 @@
+// ============================================
+// メインスタイルシート - style.scss
+// このファイルをコンパイルしてstyle.cssを生成します
+// ============================================
+
+@charset "UTF-8";
+
+// 設定ファイル
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// ベーススタイル
+@use 'base/reset';
+@use 'base/base';
+
+// レイアウト
+@use 'layout/header';
+@use 'layout/footer';
+
+// コンポーネント
+@use 'components/hero';
+@use 'components/section';
+@use 'components/accordion';
+@use 'components/buttons';
+@use 'components/table';
+@use 'components/cards';
+@use 'components/chonaikai';
+
+// ユーティリティ
+@use 'utilities/animations';
+@use 'utilities/helpers';

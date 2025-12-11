@@ -1,0 +1,245 @@
+// ============================================
+// ヘッダー - _header.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// 固定ヘッダー
+.headerfix {
+  position: fixed;
+  top: 0;
+  z-index: $z-index-header;
+  width: 100%;
+  background: $color-bg-white;
+}
+
+// ヘッダー内部コンテナ（ページ幅に収める）
+.header-inner {
+  @include pc {
+    width: $content-width-md;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8rem;
+    padding: 0 2rem;
+  }
+}
+
+header {
+  @include pc {
+    flex-shrink: 0;
+  }
+
+  @include sp {
+    width: 100%;
+    height: $header-height-sp;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-bg-white;
+  }
+}
+
+.header1 {
+  display: flex;
+  align-items: center;
+
+  @include sp {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.header2 {
+  h1 {
+    a {
+      display: inline-block;
+
+      img {
+        @include pc {
+          width: auto;
+          height: 5rem;
+        }
+
+        @include sp {
+          height: 4rem;
+        }
+      }
+    }
+  }
+}
+
+
+// ============================================
+// ハンバーガーメニューボタン
+// ============================================
+
+.openbtn {
+  @include pc {
+    display: none;
+  }
+
+  @include sp {
+    position: fixed;
+    z-index: $z-index-hamburger;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 0 $border-radius-sm;
+
+    span {
+      display: inline-block;
+      transition: all 0.4s;
+      position: absolute;
+      right: 1.5rem;
+      height: 3px;
+      border-radius: 2px;
+      background-color: $color-primary;
+      width: 3rem;
+
+      &:nth-of-type(1) {
+        top: 2.2rem;
+      }
+
+      &:nth-of-type(2) {
+        top: 3.2rem;
+      }
+
+      &:nth-of-type(3) {
+        top: 4.2rem;
+      }
+    }
+
+    // アクティブ状態
+    &.active span {
+      background-color: $color-text-white !important;
+
+      &:nth-of-type(1) {
+        top: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 50%;
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        top: 30px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 50%;
+      }
+    }
+  }
+}
+
+
+// ============================================
+// グローバルナビゲーション
+// ============================================
+
+nav {
+  @include pc {
+    text-align: right;
+    background: $color-bg-white;
+
+    ul {
+      position: relative;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      border-radius: $border-radius-md;
+
+      li {
+        display: flex;
+        align-items: center;
+        border-left: 2px solid $color-primary;
+        border-right: 2px solid $color-primary;
+
+        & + li {
+          border-left: 0;
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: $color-primary;
+          padding: 0 1.2rem;
+          margin: 0.5rem 0.5rem;
+          transition: all $transition-base;
+          font-size: $font-size-sm;
+          letter-spacing: 0.02rem;
+          font-weight: $font-weight-bold;
+          border-radius: $border-radius-sm;
+        }
+      }
+    }
+  }
+}
+
+// モバイルナビゲーション
+#g-nav {
+  @include sp {
+    position: fixed;
+    z-index: -1;
+    display: none;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba($color-secondary, 0.95);
+    transition: all $transition-fast;
+
+    &.panelactive {
+      display: block;
+      z-index: 999;
+
+      ul {
+        width: 90%;
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: $header-height-sp auto 0;
+      }
+    }
+
+    ul {
+      display: none;
+      z-index: 999;
+    }
+
+    li {
+      list-style: none;
+      text-align: center;
+      width: 95%;
+      margin: 0 auto 2rem;
+
+      a {
+        color: $color-text-dark;
+        text-decoration: none;
+        padding: 1.2rem 1rem;
+        display: flex;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-sm;
+        background: $color-bg-white;
+        border-radius: $border-radius-sm;
+        width: 100%;
+        margin: 0 auto;
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+        line-height: $line-height-tight;
+      }
+    }
+  }
+}

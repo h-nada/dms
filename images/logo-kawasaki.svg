@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80">
+  <rect fill="#fff" width="120" height="80"/>
+  <rect x="10" y="10" width="8" height="40" fill="#c00"/>
+  <rect x="22" y="10" width="8" height="40" fill="#0a0"/>
+  <rect x="34" y="10" width="8" height="40" fill="#00a"/>
+  <text x="60" y="65" font-family="sans-serif" font-size="10" fill="#333" text-anchor="middle">川崎市</text>
+</svg>

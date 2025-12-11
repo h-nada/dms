@@ -1,0 +1,57 @@
+// ============================================
+// ベーススタイル - _base.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// HTMLのフォントサイズを62.5%に設定（1rem = 10px）
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  line-height: $line-height-base;
+  color: $color-text-main;
+  background: $color-bg-main;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// 見出し
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+// リンク
+a {
+  color: $color-text-link;
+  transition: opacity $transition-fast $easing-default;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// 強調
+strong, b {
+  font-weight: $font-weight-bold;
+}
+
+// 電話リンクの無効化（PC）
+@include pc {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+// メインラッパー
+.wrapper {
+  background: $color-bg-main;
+  // 固定ヘッダー分の余白は各セクションで制御
+}

@@ -1,0 +1,139 @@
+// ============================================
+// ボタンスタイル - _buttons.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ============================================
+// CTAボタン
+// ============================================
+
+.vote-cta {
+  margin: 0 auto 5rem;
+  text-align: center;
+
+  @include pc {
+    width: $content-width-sm;
+  }
+
+  @include sp {
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
+  }
+
+  a {
+    @include button-cta;
+
+    @include pc {
+      font-size: $font-size-lg;
+      padding: 2rem 4rem;
+    }
+
+    @include sp {
+      display: block;
+      font-size: $font-size-sm;
+      padding: 1.8rem 2.5rem;
+    }
+
+    .vote-cta-text {
+      position: relative;
+      padding-right: 2rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        margin-top: -5px;
+        border-top: 3px solid $color-text-white;
+        border-right: 3px solid $color-text-white;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+
+// ============================================
+// フラットボタン
+// ============================================
+
+.btn-flat-border {
+  display: inline;
+  padding: 0.1em 0.5em 0.2em;
+  text-decoration: none;
+  color: $color-text-white;
+  background-color: $color-primary;
+  border-radius: $border-radius-md;
+  transition: $transition-fast;
+  margin-right: 10px;
+  font-size: 80%;
+
+  &:hover {
+    background: #67c5ff;
+    color: $color-text-white;
+    opacity: 1;
+  }
+}
+
+
+// ============================================
+// もっと見るボタン
+// ============================================
+
+.readmore,
+.readmore05 {
+  position: relative;
+  margin: 3em auto;
+  display: block;
+  color: $color-text-light;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  background: transparent;
+  letter-spacing: 0.1em;
+
+  @include pc {
+    padding-bottom: 17rem;
+  }
+
+  @include sp {
+    padding-bottom: 6rem;
+  }
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 0.5em;
+    background: url(../images/arrow.png) no-repeat center/20px $color-bg-white;
+    transition: $transition-fast;
+  }
+
+  &.on-click::before {
+    transform: rotate(180deg);
+  }
+
+  .open {
+    display: block;
+  }
+
+  &.on-click .open {
+    display: none;
+  }
+
+  .close {
+    display: none;
+  }
+
+  &.on-click .close {
+    display: block;
+  }
+}

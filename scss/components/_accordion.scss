@@ -1,0 +1,124 @@
+// ============================================
+// アコーディオン - _accordion.scss
+// ============================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.accordion-block {
+  margin: 0 auto 70px;
+
+  @include pc {
+    width: $content-width-sm;
+  }
+
+  @include sp {
+    width: 100%;
+    padding: 0 3rem;
+    box-sizing: border-box;
+  }
+}
+
+.accordion-title {
+  background: linear-gradient(135deg, #0070c0 0%, #00a0e9 100%);
+  color: $color-text-white;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+  position: relative;
+  border-radius: $border-radius-md;
+  transition: all $transition-fast $easing-default;
+
+  @include pc {
+    padding: 15px 50px 15px 20px;
+    font-size: $font-size-md;
+  }
+
+  @include sp {
+    padding: 12px 45px 12px 15px;
+    font-size: $font-size-sm;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  // 矢印アイコン
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid $color-text-white;
+    transition: transform $transition-fast $easing-default;
+
+    @include pc {
+      right: 20px;
+    }
+
+    @include sp {
+      right: 15px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid $color-text-white;
+    }
+  }
+
+  &.active::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.accordion-content {
+  display: none;
+
+  @include pc {
+    padding: 20px 0;
+  }
+
+  @include sp {
+    padding: 15px 10px;
+  }
+}
+
+
+// ============================================
+// セクション用アコーディオン
+// ============================================
+
+.s_01 {
+  @include sp {
+    padding: 0 0 10vw 0;
+  }
+
+  .accordion_one {
+    .accordion_header {
+      cursor: pointer;
+      transition: all $transition-fast;
+
+      &.open {
+        // オープン時のスタイル
+      }
+    }
+
+    .accordion_inner {
+      display: none;
+    }
+  }
+}
+
+
+// ============================================
+// 汎用アコーディオン（jsクラス）
+// ============================================
+
+.js-title {
+  cursor: pointer;
+
+  &.open {
+    // オープン時のスタイル
+  }
+}

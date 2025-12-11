@@ -1,0 +1,117 @@
+<!-- ============================================
+     ヒーローエリア（メインビジュアル） - _hero.html
+
+     【パターン1】Swiperスライダー
+     複数画像を自動でスライドさせる場合に使用
+
+     【パターン2】背景画像切替
+     jQuery bgSwitcherで背景画像を切り替える場合に使用
+
+     【パターン3】静止画像
+     シンプルに1枚の画像を表示する場合に使用
+     ============================================ -->
+
+
+<!-- ============================================
+     パターン1: Swiperスライダー
+     ============================================ -->
+
+<div class="swiper__w">
+
+	<!-- メインテキスト（画像上に表示） -->
+	<div class="swiper_txt">
+		<div class="swiper_txt0 fadeUp">
+			<div class="swiper_txt1">
+				<div class="swiper_txt2">
+					<img src="./images/logo-main.png" alt="メインロゴ">
+				</div>
+			</div>
+			<!-- CTAボタン（必要な場合） -->
+			<!--
+			<div class="swiper_txt3">
+				<a href="#section01"><span>詳しく見る</span></a>
+			</div>
+			-->
+		</div>
+	</div>
+
+	<!-- Swiperスライダー -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="slide-img">
+					<img src="./images/mainimg1.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="slide-img">
+					<img src="./images/mainimg2.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="slide-img">
+					<img src="./images/mainimg3.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- ページネーション -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+</div>
+
+
+<!-- ============================================
+     パターン2: 背景画像切替（jQuery bgSwitcher）
+     使用する場合はパターン1をコメントアウト
+     ============================================ -->
+
+<!--
+<div class="mainimg_w">
+	<div class="swiper_txt">
+		<div class="swiper_txt0 fadeUp">
+			<div class="swiper_txt1">
+				<div class="swiper_txt2">
+					<img src="./images/logo-main.png" alt="メインロゴ">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+-->
+
+<!--
+JS設定（common.jsに記載）:
+jQuery(function($) {
+    $('.mainimg_w').bgSwitcher({
+        images: ['images/mainimg1.jpg','images/mainimg2.jpg','images/mainimg3.jpg'],
+        interval: 6000,
+        loop: true,
+        shuffle: false,
+        effect: "fade",
+        duration: 1600,
+        easing: "linear"
+    });
+});
+-->
+
+
+<!-- ============================================
+     パターン3: 静止画像
+     使用する場合はパターン1をコメントアウト
+     ============================================ -->
+
+<!--
+<div class="swiper__w">
+	<div class="swiper_txt">
+		<div class="swiper_txt0 fadeUp">
+			<div class="swiper_txt1">
+				<div class="swiper_txt2">
+					<img src="./images/logo-main.png" alt="メインロゴ">
+				</div>
+			</div>
+		</div>
+	</div>
+	<img src="./images/mainimg1.jpg" alt="" style="width:100%; height:auto;">
+</div>
+-->
